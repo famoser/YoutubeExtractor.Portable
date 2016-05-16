@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Famoser.YoutubeExtractor.Portable</id>
+        <version>1.0.2</version>
+        <authors>Florian Moser</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Extract video links from a youtube url. Download video and audio of youtube video.</description>
+        <releaseNotes>initial release</releaseNotes>
+		<dependencies>
+			<dependency id="Newtonsoft.Json" />
+			<dependency id="Microsoft.Net.Http" />
+		</dependencies>
+    </metadata>
+    <files>
+	    <file src="Famoser.YoutubeExtractor.Portable\bin\Release\Famoser.YoutubeExtractor.Portable.dll" target="lib\dotnet\Famoser.YoutubeExtractor.Portable.dll" />
+        <file src="Famoser.YoutubeExtractor.Portable\bin\Release\Famoser.YoutubeExtractor.Portable.dll" target="lib\portable-net45+win8+wpa81+wp8\Famoser.YoutubeExtractor.Portable.dll" />
+        <file src="Famoser.YoutubeExtractor.Portable\bin\Release\Famoser.YoutubeExtractor.Portable.dll" target="lib\Famoser.YoutubeExtractor.Portable.dll" />
+    </files>
+</package>
