@@ -34,7 +34,7 @@ VideoInfo video =  downloader.ChooseBest(videoInfos);
   
 //If the video has a decrypted signature, decipher it
 if (video.RequiresDecryption)
-    DownloadUrlResolver.DecryptDownloadUrl(video);
+    await DownloadUrlResolver.DecryptDownloadUrl(video);
 
 // Register the any events
 downloader.VideoDownloadProgressChanged += (sender, args) => Console.WriteLine(args.ProgressPercentage);
@@ -61,7 +61,7 @@ VideoInfo video =  downloader.ChooseBest(videoInfos);
   
 //If the video has a decrypted signature, decipher it
 if (video.RequiresDecryption)
-    DownloadUrlResolver.DecryptDownloadUrl(video);
+    await DownloadUrlResolver.DecryptDownloadUrl(video);
 
 // Register the any events
 downloader.AudioExtractionProgressChanged += (sender, args) => Console.WriteLine(args.ProgressPercentage);
