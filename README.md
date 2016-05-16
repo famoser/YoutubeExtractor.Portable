@@ -37,10 +37,10 @@ if (video.RequiresDecryption)
     DownloadUrlResolver.DecryptDownloadUrl(video);
 
 // Register the any events
-downloader.DownloadProgressChanged += (sender, args) => Console.WriteLine(args.ProgressPercentage);
+downloader.VideoDownloadProgressChanged += (sender, args) => Console.WriteLine(args.ProgressPercentage);
 
 //Execute the video downloader.
-var stream = await downloader.Execute(videoInfo);
+var stream = await downloader.Execute(video);
 
 //save stream to file, the correct extension is saved in video.
 
@@ -67,7 +67,7 @@ if (video.RequiresDecryption)
 downloader.AudioExtractionProgressChanged += (sender, args) => Console.WriteLine(args.ProgressPercentage);
 
 //Execute the video downloader.
-var stream = await downloader.Execute(videoInfo);
+var stream = await downloader.Execute(video);
 
 //save stream to file, the correct extension is saved in video.
 
