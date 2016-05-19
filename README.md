@@ -1,3 +1,5 @@
+on nuget: https://www.nuget.org/packages/Famoser.YoutubeExtractor.Portable
+
 This is a portable version of https://github.com/flagbug/YoutubeExtractor
 
 I've simplified the API, though. Some examples:
