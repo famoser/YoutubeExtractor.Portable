@@ -49,6 +49,8 @@ namespace Famoser.YoutubeExtractor.Portable.Tests
             var list = new List<string>()
             {
                 "https://www.youtube.com/watch?v=vxMxYgkUcdU",
+                "https://www.youtube.com/watch?v=ZS0WvzRVByg",
+                "https://www.youtube.com/watch?v=iX-QaNzd-0Y",
                 "https://www.youtube.com/watch?v=Pyly3JtXoy4"
             };
 

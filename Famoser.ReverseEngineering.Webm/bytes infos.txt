@@ -1,0 +1,6 @@
+same bytes at the start of all aac files
+255
+241
+92
+64
+23

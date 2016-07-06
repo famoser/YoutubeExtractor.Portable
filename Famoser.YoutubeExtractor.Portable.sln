@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{00
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Famoser.YoutubeExtractor.Portable.Tests", "Famoser.YoutubeExtractor.Portable.Tests\Famoser.YoutubeExtractor.Portable.Tests.csproj", "{1D260A6E-F828-471F-A7E5-0D4AD69A539B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Famoser.ReverseEngineering.Webm", "Famoser.ReverseEngineering.Webm\Famoser.ReverseEngineering.Webm.csproj", "{5A30C3AA-B8BA-4C31-A8A0-E04F87E56CA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,22 +32,22 @@ Global
 		{D71C979F-7F55-4AD3-854C-7F1FFF35B4F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D71C979F-7F55-4AD3-854C-7F1FFF35B4F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D71C979F-7F55-4AD3-854C-7F1FFF35B4F0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CE76B74C-BD0C-4768-8F8B-78E0FBD46FBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CE76B74C-BD0C-4768-8F8B-78E0FBD46FBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CE76B74C-BD0C-4768-8F8B-78E0FBD46FBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CE76B74C-BD0C-4768-8F8B-78E0FBD46FBC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1D260A6E-F828-471F-A7E5-0D4AD69A539B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1D260A6E-F828-471F-A7E5-0D4AD69A539B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D260A6E-F828-471F-A7E5-0D4AD69A539B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D260A6E-F828-471F-A7E5-0D4AD69A539B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A30C3AA-B8BA-4C31-A8A0-E04F87E56CA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A30C3AA-B8BA-4C31-A8A0-E04F87E56CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A30C3AA-B8BA-4C31-A8A0-E04F87E56CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A30C3AA-B8BA-4C31-A8A0-E04F87E56CA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D71C979F-7F55-4AD3-854C-7F1FFF35B4F0} = {00FB3F5F-DBE7-4DEA-BC82-D52A1B8F8610}
-		{CE76B74C-BD0C-4768-8F8B-78E0FBD46FBC} = {2F6BC530-621C-468D-9024-4D177C77248B}
 		{1D260A6E-F828-471F-A7E5-0D4AD69A539B} = {2F6BC530-621C-468D-9024-4D177C77248B}
+		{5A30C3AA-B8BA-4C31-A8A0-E04F87E56CA7} = {2F6BC530-621C-468D-9024-4D177C77248B}
 	EndGlobalSection
 	GlobalSection(CodealikeProperties) = postSolution
 		SolutionGuid = 09b3acc1-9c76-4060-a18f-5b5f253925cc
