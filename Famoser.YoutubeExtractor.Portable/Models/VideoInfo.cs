@@ -57,7 +57,14 @@ namespace Famoser.YoutubeExtractor.Portable.Models
             new VideoInfo(140, VideoType.Mp4, 0, false, AudioType.Aac, 128, AdaptiveType.Audio),
             new VideoInfo(141, VideoType.Mp4, 0, false, AudioType.Aac, 256, AdaptiveType.Audio),
             new VideoInfo(171, VideoType.WebM, 0, false, AudioType.Vorbis, 128, AdaptiveType.Audio),
-            new VideoInfo(172, VideoType.WebM, 0, false, AudioType.Vorbis, 192, AdaptiveType.Audio)
+            new VideoInfo(172, VideoType.WebM, 0, false, AudioType.Vorbis, 192, AdaptiveType.Audio),
+
+            /* Audio only, playable as flv, webm or mp4 in vlc.
+             * flv: prbably not, as the converter fails
+             * webm: most likely, as this format is the one specified on the url */
+            new VideoInfo(249, VideoType.WebM, 0, false, AudioType.Aac, 6, AdaptiveType.Audio),
+            new VideoInfo(250, VideoType.WebM, 0, false, AudioType.Aac, 8, AdaptiveType.Audio),
+            new VideoInfo(251, VideoType.WebM, 0, false, AudioType.Aac, 16, AdaptiveType.Audio)
         };
 
         internal VideoInfo(int formatCode)
