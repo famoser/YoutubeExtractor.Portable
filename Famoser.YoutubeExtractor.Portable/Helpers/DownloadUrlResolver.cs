@@ -90,26 +90,28 @@ namespace Famoser.YoutubeExtractor.Portable.Helpers
             try
             {
                 var json = await LoadJson(videoUrl);
-
-                string videoTitle = GetVideoTitle(json);
-
-                IEnumerable<ExtractionInfo> downloadUrls = ExtractDownloadUrls(json);
-
-                IEnumerable<VideoInfo> infos = GetVideoInfos(downloadUrls, videoTitle).ToList();
-
-                string htmlPlayerVersion = GetHtml5PlayerVersion(json);
-
-                foreach (VideoInfo info in infos)
+                if (json != null)
                 {
-                    info.HtmlPlayerVersion = htmlPlayerVersion;
+                    string videoTitle = GetVideoTitle(json);
 
-                    if (decryptSignature && info.RequiresDecryption)
+                    IEnumerable<ExtractionInfo> downloadUrls = ExtractDownloadUrls(json);
+
+                    IEnumerable<VideoInfo> infos = GetVideoInfos(downloadUrls, videoTitle).ToList();
+
+                    string htmlPlayerVersion = GetHtml5PlayerVersion(json);
+
+                    foreach (VideoInfo info in infos)
                     {
-                        await DecryptDownloadUrl(info);
-                    }
-                }
+                        info.HtmlPlayerVersion = htmlPlayerVersion;
 
-                return infos;
+                        if (decryptSignature && info.RequiresDecryption)
+                        {
+                            await DecryptDownloadUrl(info);
+                        }
+                    }
+
+                    return infos;
+                }
             }
 
             catch (Exception ex)
@@ -310,11 +312,22 @@ namespace Famoser.YoutubeExtractor.Portable.Helpers
                 throw new VideoNotAvailableException("video not awilable at " + url);
             }
 
+
+            /*
             var dataRegex = new Regex(@"ytplayer\.config\s*=\s*(\{.+?\});", RegexOptions.Multiline);
 
-            string extractedJson = dataRegex.Match(pageSource).Result("$1");
+            string extractedJson = dataRegex.Match(pageSource).Result("$1");*/
 
-            return JObject.Parse(extractedJson);
+            var dataRegex = new Regex(@"ytplayer\.config\s*=\s*(\{.+?\});", RegexOptions.Multiline);
+
+            var matches = dataRegex.Matches(pageSource);
+            if (matches.Count > 0)
+            {
+                string extractedJson = matches[0].Result("$1");
+
+                return JObject.Parse(extractedJson);
+            }
+            return null;
         }
 
         private static void ThrowYoutubeParseException(Exception innerException, string videoUrl)

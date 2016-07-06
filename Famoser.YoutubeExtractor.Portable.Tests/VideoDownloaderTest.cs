@@ -26,7 +26,7 @@ namespace Famoser.YoutubeExtractor.Portable.Tests
             using (MemoryStream ms = new MemoryStream())
             {
                 int read;
-                while ((read = await stream.ReadAsync(buffer,0,buffer.Length)) > 0)
+                while ((read = await stream.ReadAsync(buffer, 0, buffer.Length)) > 0)
                 {
                     ms.Write(buffer, 0, read);
                 }
@@ -41,6 +41,23 @@ namespace Famoser.YoutubeExtractor.Portable.Tests
 
             var downloader = new VideoDownloader();
             Assert.IsNotNull(downloader.ChooseBest(videoInfos));
+        }
+
+        [TestMethod]
+        public async Task TestVideos()
+        {
+            var list = new List<string>()
+            {
+                "https://www.youtube.com/watch?v=vxMxYgkUcdU",
+                "https://www.youtube.com/watch?v=Pyly3JtXoy4"
+            };
+
+            foreach (var item in list)
+            {
+                IEnumerable<VideoInfo> videoInfos = await DownloadUrlResolver.GetDownloadUrlsAsync(item);
+                Assert.IsNotNull(videoInfos);
+                Assert.IsTrue(videoInfos.Any());
+            }
         }
     }
 }
