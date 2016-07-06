@@ -309,7 +309,7 @@ namespace Famoser.YoutubeExtractor.Portable.Helpers
 
             if (IsVideoUnavailable(pageSource))
             {
-                throw new VideoNotAvailableException("video not awilable at " + url);
+                throw new VideoNotAvailableException("video not available at " + url);
             }
 
 
